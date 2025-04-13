@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="assets/logo.png" alt="Spotify Logo" class="logo" />
+    <ul class="menu">
+      <li>Home</li>
+      <li>Search</li>
+      <li>Your Library</li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1 class="heading">Chill Music</h1>
+    <div class="playlist">
+      <div class="song" onclick="loadSong(0)">
+        <img src="assets/album1.jpg" alt="Album 1" />
+        <div class="song-info">
+          <h3>Bài hát 1</h3>
+          <p>Nghệ sĩ A</p>
+        </div>
+      </div>
+      <div class="song" onclick="loadSong(1)">
+        <img src="assets/album2.jpg" alt="Album 2" />
+        <div class="song-info">
+          <h3>Bài hát 2</h3>
+          <p>Nghệ sĩ B</p>
+        </div>
+      </div>
+      <div class="song" onclick="loadSong(2)">
+        <img src="assets/album3.jpg" alt="Album 3" />
+        <div class="song-info">
+          <h3>Bài hát 3</h3>
+          <p>Nghệ sĩ C</p>
+        </div>
+      </div>
+      <!-- Add more songs if needed -->
+    </div>
+  </div>
+
+  <!-- Now Playing Bar -->
+  <div class="player">
+    <div class="song-info">
+      <img src="assets/album1.jpg" alt="Now Playing" />
+      <div>
+        <h3 id="song-title">Bài hát 1</h3>
+        <p id="song-artist">Nghệ sĩ A</p>
+      </div>
+    </div>
+    <div class="controls">
+      <button onclick="prevSong()">⏮</button>
+      <button onclick="togglePlay()" id="play-btn">▶️</button>
+      <button onclick="nextSong()">⏭</button>
+    </div>
+  </div>
+
+  <audio id="audio" src="songs/song1.mp3"></audio>
+  
+  <script src="script.js"></script>
+</body>
+</html>
